@@ -4,9 +4,10 @@ Ansible-role-cvmfs-server
 Ansible role to install CernVM FS Server.
 
 To Install CernVM FS Client: https://github.com/mtangaro/ansible-role-cvmfs-client
+
 To Create a CernVM Replica: https://github.com/mtangaro/ansible-role-cvmfs-replica
 
-Despite this role has been create to be  general, it is used to create Galaxy Reference Data.
+Despite this role has been create to be general, it is used to create Galaxy Reference Data.
 To populate Stratum 0 
 
 Requirements
