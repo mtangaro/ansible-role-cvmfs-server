@@ -1,2 +1,6 @@
 ---
 # defaults file for ansible-role-cvmfs-server
+
+repository_name: 'elixir-italy.galaxy.refdata'
+
+repository_url: 'http://{{ ansible_default_ipv4.address }}/cvmfs/{{ repository_name }}'

@@ -6,7 +6,13 @@ Ansible role to install CernVM FS Server.
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Python is required on host to run ansible: sudo apt-get install python
+
+The apt ansible module requires the following packages on host to run:
+
+- python-apt (python 2)
+- python3-apt (python 3)
+- aptitude
 
 Role Variables
 --------------

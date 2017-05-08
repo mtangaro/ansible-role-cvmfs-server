@@ -1,0 +1,28 @@
+---
+
+- name: Check if Stratum-0 exist
+  command: 'cvmfs_server list'
+  register: stratum0_list
+
+- shell: 'echo {{ stratum0_list }} > /home/ubuntu/stratum0_list'
+
+- name: Create Stratum-0
+  command: 'cvmfs_server mkfs -w {{ repository_url }} -o cvmfs {{ repository_name }}'
+  when: repository_name not in stratum0_list.stdout
+
+- name: Publish test content to Stratum-0
+  command: '{{ item }}'
+  with_items:
+    - 'cvmfs_server transaction {{ repository_name }}'
+    - 'touch /cvmfs/{{ repository_name }}/test-content'
+    - 'cvmfs_server publish {{ repository_name }}'
+
+- name: Create Cron job to periodically resign the repository
+  cron:
+    name: Resign repository
+    weekday: 0
+    minute: 0
+    hour: 0
+    user: root
+    job: 'cvmfs_server resign {{ repository_name }}'
+    cron_file: cvmfs_server_resign
