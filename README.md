@@ -1,7 +1,13 @@
-Role Name
+Ansible-role-cvmfs-server
 =========
 
 Ansible role to install CernVM FS Server.
+
+To Install CernVM FS Client: https://github.com/mtangaro/ansible-role-cvmfs-client
+To Create a CernVM Replica: https://github.com/mtangaro/ansible-role-cvmfs-replica
+
+Despite this role has been create to be  general, it is used to create Galaxy Reference Data.
+To populate Stratum 0 
 
 Requirements
 ------------
@@ -14,16 +20,6 @@ The apt ansible module requires the following packages on host to run:
 - python3-apt (python 3)
 - aptitude
 
-Role Variables
---------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
 Example Playbook
 ----------------
 
@@ -31,14 +27,16 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: ansible-role-cvmfs-server }
 
 License
 -------
 
-BSD
+Apache2
 
-Author Information
-------------------
+Reference
+---------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Official cvmfs documentation: http://cvmfs.readthedocs.io/en/stable/cpt-repo.html
+
+NIKHEF documentation: https://wiki.nikhef.nl/grid/Adding_a_new_cvmfs_repository
