@@ -1,5 +1,4 @@
 ---
-
 - name: Check if Stratum-0 exist
   command: 'cvmfs_server list'
   register: stratum0_list
@@ -17,6 +16,12 @@
     - 'touch /cvmfs/{{ repository_name }}/test-content'
     - 'cvmfs_server publish {{ repository_name }}'
 
+- name: Copy resign script (from https://wiki.nikhef.nl/grid/Adding_a_new_cvmfs_repository)
+  copy:
+    src: 'Cvmfs-stratum0-resign.sh'
+    dest: '/usr/local/bin/Cvmfs-stratum0-resign'
+    mode: 'a+x'
+
 - name: Create Cron job to periodically resign the repository
   cron:
     name: Resign repository
@@ -24,5 +29,5 @@
     minute: 0
     hour: 0
     user: root
-    job: 'cvmfs_server resign {{ repository_name }}'
+    job: 'Cvmfs-stratum0-resign'
     cron_file: cvmfs_server_resign

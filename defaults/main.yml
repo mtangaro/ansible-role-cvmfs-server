@@ -3,4 +3,7 @@
 
 repository_name: 'elixir-italy.galaxy.refdata'
 
-repository_url: 'http://{{ ansible_default_ipv4.address }}/cvmfs/{{ repository_name }}'
+stratum_0: '{{ ansible_default_ipv4.address }}'
+
+repository_url: 'http://{{ stratum_0 }}/cvmfs/{{ repository_name }}'
+
