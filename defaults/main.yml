@@ -6,3 +6,25 @@ repository_name: 'elixir-italy.galaxy.refdata'
 stratum_zero: '{{ ansible_default_ipv4.address }}'
 
 repository_url: 'http://{{ stratum_zero }}/cvmfs/{{ repository_name }}'
+
+#--- 
+# S3 Compatible Storage Systems Configuration
+# Preliminary
+
+# Number of S3 accounts to be used, e.g. 1. With some S3 servers use of multiple accounts can increase the upload speed significantly
+cvmfs_s3_accounts: 'accounts'
+
+# S3 account access key(s) separated with :, e.g. KEY-A:KEY-B:...
+cvmfs_s3_access_key: 'access_key'
+
+# S3 account secret key(s) separated with :, e.g. KEY-A:KEY-B:...
+cvmfs_s3_secret_key: 'secret_key'
+
+# S3 buckets used per account, e.g. 1. With some S3 servers use of multiple buckets can increase the upload speed significantly
+cvmfs_s3_buckets_per_account: 1
+
+# S3 server hostname, e.g. s3.amazonaws.com
+cvmfs_s3_host: 'cloud_provider'
+
+# S3 bucket base name. Account and bucket index are appended to the bucket base name. If you use just one account and one bucket, e.g. named mybucket, then you need to create only one bucket called mybucket-1-1
+cvmfs_s3_bucket: 'bucket'
