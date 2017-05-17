@@ -2,5 +2,7 @@
 # tasks file for ansible-role-cvmfs-server
 
 - include: install.yml
+  become_user: root
+  become_method: sudo
 
 - include: create_stratum_0.yml
