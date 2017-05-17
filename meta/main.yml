@@ -1,6 +1,6 @@
 galaxy_info:
   author: Marco Antonio Tangaro
-  description: Ansible role to setup a CERNVM FSstratum zero repository
+  description: Ansible role to setup a CernVM-FS stratum zero repository
   company: IBIOM-CNR, ELIXIR-IIB
   license: Apache
   min_ansible_version: 2.0
