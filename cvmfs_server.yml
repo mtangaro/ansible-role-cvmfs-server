@@ -1,0 +1,7 @@
+---
+# Role install: ansible-galaxy install mtangaro.cvmfs-server
+
+- hosts: localhost
+  connection: local
+  roles:
+    - { role: mtangaro.cvmfs-server }
