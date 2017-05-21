@@ -1,0 +1,10 @@
+---
+- apt:
+    deb: https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+
+- apt:
+    name: '{{ item }}'
+    update_cache: yes
+  with_items:
+   - cvmfs
+   - cvmfs-server

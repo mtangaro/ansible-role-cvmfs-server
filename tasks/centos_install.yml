@@ -1,0 +1,13 @@
+---
+- name: Install CernVM-FS repository
+  yum:
+    name: https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+    state: present
+
+- name: Install CernVM-FS
+  yum:
+    name: {{ item }}
+    state: latest
+  with_items:
+    - cvmfs
+    - cvmfs_server
