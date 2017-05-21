@@ -6,7 +6,7 @@
 
 - name: Install CernVM-FS
   yum:
-    name: {{ item }}
+    name: '{{ item }}'
     state: latest
   with_items:
     - cvmfs
