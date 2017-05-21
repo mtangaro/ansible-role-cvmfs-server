@@ -10,4 +10,4 @@
     state: latest
   with_items:
     - cvmfs
-    - cvmfs_server
+    - cvmfs-server
