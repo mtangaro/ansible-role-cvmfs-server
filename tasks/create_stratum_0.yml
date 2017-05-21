@@ -3,8 +3,6 @@
   command: 'cvmfs_server list'
   register: stratum0_list
 
-- shell: 'echo {{ stratum0_list }} > /home/ubuntu/stratum0_list'
-
 - name: Create Stratum-0
   command: 'cvmfs_server mkfs -w {{ repository_url }} -o cvmfs {{ repository_name }}'
   when: repository_name not in stratum0_list.stdout
