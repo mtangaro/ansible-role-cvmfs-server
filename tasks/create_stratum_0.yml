@@ -29,3 +29,8 @@
     user: root
     job: 'Cvmfs-stratum0-resign'
     cron_file: cvmfs_server_resign
+
+- name: Restart Apache
+  systemd:
+    name: apache2
+    state: reload
