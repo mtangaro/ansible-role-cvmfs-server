@@ -1,14 +1,17 @@
-Ansible-role-cvmfs-server
-=========
+Indigo-dc.cvmfs-server
+=========================
 
 Ansible role to install CernVM FS Server.
 
-To Install CernVM FS Client: https://github.com/mtangaro/ansible-role-cvmfs-client
+To Install CernVM FS Client: https://github.com/indigo-dc/ansible-role-cvmfs-client
 
-To Create a CernVM Replica: https://github.com/mtangaro/ansible-role-cvmfs-replica
+To Create a CernVM Replica: https://github.com/mtangaro/ansible-role-cvmfs-replica (on-going)
 
-Despite this role has been create to be general, it is used to create Galaxy Reference Data.
-To populate Stratum 0 
+This role has been create to be general, but it is used to create Galaxy Reference Data read-only repository. To populate Stratum Zero repository with Reference data: https://github.com/indigo-dc/Reference-data-galaxycloud-repository
+
+### Development
+
+- S3 support and squid proxy server support is on-going.
 
 Requirements
 ------------
@@ -18,8 +21,6 @@ Python is required on host to run ansible: sudo apt-get install python
 The apt ansible module requires the following packages on host to run:
 
 - python-apt (python 2)
-- python3-apt (python 3)
-- aptitude
 
 Example Playbook
 ----------------
@@ -28,7 +29,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: ansible-role-cvmfs-server }
+         - { role: indigo-dc.cvmfs-server }
 
 License
 -------
