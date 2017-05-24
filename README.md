@@ -33,7 +33,8 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-Apache2
+Apache Licence v2
+http://www.apache.org/licenses/LICENSE-2.0
 
 Reference
 ---------
@@ -41,3 +42,8 @@ Reference
 Official cvmfs documentation: http://cvmfs.readthedocs.io/en/stable/cpt-repo.html
 
 NIKHEF documentation: https://wiki.nikhef.nl/grid/Adding_a_new_cvmfs_repository
+
+Author Information
+------------------
+
+Marco Tanagaro (ma.tangaro_at_ibbe.cnr.it)
