@@ -4,4 +4,4 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: mtangaro.cvmfs-server }
+    - { role: indigo.cvmfs-server }
