@@ -4,4 +4,4 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: indigo.cvmfs-server }
+    - { role: indigo-dc.cvmfs-server }
